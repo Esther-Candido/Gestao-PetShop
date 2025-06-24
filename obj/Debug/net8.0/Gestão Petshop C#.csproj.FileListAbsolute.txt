@@ -1,0 +1,15 @@
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\bin\Debug\net8.0\Gestão Petshop C#.exe
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\bin\Debug\net8.0\Gestão Petshop C#.deps.json
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\bin\Debug\net8.0\Gestão Petshop C#.runtimeconfig.json
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\bin\Debug\net8.0\Gestão Petshop C#.dll
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\bin\Debug\net8.0\Gestão Petshop C#.pdb
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.AssemblyInfoInputs.cache
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.AssemblyInfo.cs
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.csproj.CoreCompileInputs.cache
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.sourcelink.json
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.dll
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\refint\Gestão Petshop C#.dll
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.pdb
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\Gestão Petshop C#.genruntimeconfig.cache
+C:\Users\esthe\Desktop\projetos_c\Gestão Petshop C#\obj\Debug\net8.0\ref\Gestão Petshop C#.dll

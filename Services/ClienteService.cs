@@ -78,13 +78,13 @@ namespace Gestão_Petshop_C_.Services
             {
                 foreach (Cliente item in lista)
                 {
-                    Console.WriteLine($"Nome: {item.Nome} - Email:{item.Telefone} - Idade:{item.Endereco}");
+                    Console.WriteLine($"Nome: {item.Nome} - Tel:{item.Telefone} - Endereço:{item.Endereco}");
                 }
                 
             }
             
         }
-        
+
         public void Remover(ClienteDTO cliente)
         {
             var buscarCliente = _repositorio.BuscarCliente(cliente.Nome);
