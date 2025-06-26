@@ -18,7 +18,7 @@ namespace Gestão_Petshop_C_.Services
         }
 
 
-        public void CadastrarPetCliente(PetDTO dto, Cliente cliente)
+        public void CadastrarPetCliente(PetDTO dto)
         {
             //cadastrar
             Pet newpet = new Pet
@@ -27,7 +27,7 @@ namespace Gestão_Petshop_C_.Services
                 dto.Raca,
                 dto.Idade,
                 dto.TipoAtual,
-                cliente
+                dto.Dono
 
             );
             _repositorio.CadastrarPetCliente(newpet);
@@ -35,9 +35,21 @@ namespace Gestão_Petshop_C_.Services
         }
 
 
-        public List<Pet> ListaPet()
+        public void ListaPet()
         {
-            return _repositorio.ListaPet();
+            var lista = _repositorio.ListaPet();
+             if (lista.Count == 0)
+            {
+                Console.WriteLine("Nenhum Pet cadastrado!");
+            }
+            else
+            {
+                foreach (Pet item in lista)
+                {
+                    Console.WriteLine($"Nome: {item.Nome} - Raça:{item.Raca} - Idade:{item.Idade} - Tipo: {item.TipoAtual} - Dono: {item.Dono}");
+                }
+                
+            }
         }
 
 

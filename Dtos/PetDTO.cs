@@ -9,10 +9,11 @@ namespace Gestão_Petshop_C_.Dtos
 {
     public class PetDTO
     {
-        public string Nome { get; set; }
-        public string Raca { get; set; }
+        public string? Nome { get; set; }
+        public string? Raca { get; set; }
         public Tipo TipoAtual { get; set; }
         public int Idade { get; set; }
+        public Cliente? Dono { get; set; }
         
     }
 }

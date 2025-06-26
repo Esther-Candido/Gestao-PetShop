@@ -1,10 +1,15 @@
-﻿using Gestão_Petshop_C_.Dtos;
+﻿using System.ComponentModel;
+using Gestão_Petshop_C_.Dtos;
 using Gestão_Petshop_C_.Models;
 using Gestão_Petshop_C_.Repository;
 using Gestão_Petshop_C_.Services;
 
 ClienteRepository repo = new ClienteRepository();
 ClienteService clienteService = new ClienteService(repo);
+
+
+PetRepository repo2 = new PetRepository();
+PetService petservice = new PetService(repo2);
 
 
 bool seguir = true;
@@ -78,7 +83,74 @@ while (seguir)
             }
             break;
         case "2":
-            Console.Clear();
+            var runPet = true;
+            while (runPet)
+            {
+                Console.Clear();
+                Console.WriteLine("======PETS======");
+                Console.WriteLine("1 - Cadastrar Pet -> Cliente");
+                Console.WriteLine("2 - Listar Todos");
+                Console.WriteLine("3 - Listar Pet -> Cliente");
+                Console.WriteLine("4 - Remover");
+                Console.WriteLine("0 - Menu Principal");
+                Console.Write("Opção: ");
+                string opcPet = Console.ReadLine();
+                switch (opcPet)
+                {
+                    case "1":
+                        Console.Clear();
+                        Console.Write("Nome Pet: ");
+                        string nome = Console.ReadLine();
+                        Console.Write("Raça: ");
+                        string raca = Console.ReadLine();
+                        Console.Write("Tipo Animal (Cachorro, Gato, Pássaro, Galinha): ");
+                        string tipo = Console.ReadLine();
+                        Console.Write("Idade: ");
+                        int idade = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Dono (nome do cliente já cadastrado): ");
+                        string dono = Console.ReadLine();
+
+                        // Converter string para enum Tipo
+                        if (!Enum.TryParse<Tipo>(tipo, true, out Tipo tipoConvertido))
+                        {
+                            Console.WriteLine("Tipo inválido! Tente novamente.");
+                            break;
+                        }
+
+                        // Buscar cliente 
+                        var buscarCliente = repo.ListaClientes();
+                        Cliente clienteEncontrado = buscarCliente.FirstOrDefault(a => a.Nome == dono);
+                    
+
+                        PetDTO novoPet = new PetDTO()
+                        {
+                            Nome = nome,
+                            Raca = raca,
+                            TipoAtual = tipoConvertido,
+                            Idade = idade,
+                            Dono = clienteEncontrado
+                        };
+
+                        petservice.CadastrarPetCliente(novoPet);
+                        Console.Clear();
+                        break;
+                    case "2":
+                        Console.Clear();
+                        break;
+                    case "3":
+                        Console.Clear();
+                        break;
+                    case "4":
+                        Console.Clear();
+                        break;
+                    case "0":
+                        runPet = false;
+                        Console.Clear();
+                        break;
+                    default:
+                        break;
+                }
+            }
             break;
         case "0":
             seguir = false;
@@ -89,3 +161,7 @@ while (seguir)
     }
 }
 
+int Int32Converter(string? v)
+{
+    throw new NotImplementedException();
+}
