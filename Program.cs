@@ -89,7 +89,7 @@ while (seguir)
                 Console.Clear();
                 Console.WriteLine("======PETS======");
                 Console.WriteLine("1 - Cadastrar Pet -> Cliente");
-                Console.WriteLine("2 - Listar Todos");
+                Console.WriteLine("2 - Lista de Pets");
                 Console.WriteLine("3 - Listar Pet -> Cliente");
                 Console.WriteLine("4 - Remover");
                 Console.WriteLine("0 - Menu Principal");
@@ -136,12 +136,26 @@ while (seguir)
                         break;
                     case "2":
                         Console.Clear();
+                        Console.WriteLine("\n===== Lista de Pets =====");
+                        petservice.SoPet();
+                        Console.WriteLine("Pressione uma tecla para continuar...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     case "3":
+                        Console.Clear();
+                        Console.WriteLine("\n===== Pets & Donos =====");
+                        petservice.ListaPet();
+                        Console.WriteLine("Pressione uma tecla para continuar...");
+                        Console.ReadKey();
                         Console.Clear();
                         break;
                     case "4":
                         Console.Clear();
+                        Console.Write("Nome do Pet: ");
+                        string petRemover = Console.ReadLine();
+                        PetDTO Petremove = new PetDTO() { Nome = petRemover };
+                        petservice.Remover(Petremove);
                         break;
                     case "0":
                         runPet = false;
@@ -159,9 +173,4 @@ while (seguir)
         default:
             break;
     }
-}
-
-int Int32Converter(string? v)
-{
-    throw new NotImplementedException();
 }

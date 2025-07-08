@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gestão Petshop C#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb8d2ea25a6fddf8ea2031194080fb3e09a3113e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5031823e96f96ee5d9c05f7d864ae39e326d72f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gestão Petshop C#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gestão Petshop C#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,7 +17,13 @@ namespace Gestão_Petshop_C_.Repository
             pets.Add(pet);
         }
 
-        //listar pets da lista
+        //lista pets
+        public List<Pet> SoPet()
+        {
+            return pets;
+        }
+
+        //listar pets com os donos
         public List<Pet> ListaPet()
         {
             return pets;
@@ -29,5 +35,7 @@ namespace Gestão_Petshop_C_.Repository
         {
             pets.Remove(pet);
         }
+
+
     }
 }

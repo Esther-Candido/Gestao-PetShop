@@ -11,6 +11,7 @@ namespace Gestão_Petshop_C_.Interfaces
         
         void CadastrarPetCliente(Pet pet);
         List<Pet> ListaPet();
+        List<Pet> SoPet();
         void Remover(Pet pet);
 
     }

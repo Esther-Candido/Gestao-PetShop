@@ -38,7 +38,7 @@ namespace Gestão_Petshop_C_.Services
         public void ListaPet()
         {
             var lista = _repositorio.ListaPet();
-             if (lista.Count == 0)
+            if (lista.Count == 0)
             {
                 Console.WriteLine("Nenhum Pet cadastrado!");
             }
@@ -46,9 +46,26 @@ namespace Gestão_Petshop_C_.Services
             {
                 foreach (Pet item in lista)
                 {
-                    Console.WriteLine($"Nome: {item.Nome} - Raça:{item.Raca} - Idade:{item.Idade} - Tipo: {item.TipoAtual} - Dono: {item.Dono}");
+                    Console.WriteLine($"Nome do animal: {item.Nome}  - Dono: {item.Dono.Nome}");
                 }
-                
+
+            }
+        }
+
+        public void SoPet()
+        {
+            var lista = _repositorio.SoPet();
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("Nenhum Pet cadastrado!");
+            }
+            else
+            {
+                foreach (Pet item in lista)
+                {
+                    Console.WriteLine($"Nome: {item.Nome} - Raça: {item.Raca} - Idade: {item.Idade} - Tipo: {item.TipoAtual}");
+                }
+
             }
         }
 
